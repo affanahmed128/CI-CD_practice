@@ -27,7 +27,7 @@ jobs:
       - name: Package build output as ZIP
         run : |
           mkdir Py_output
-          cp -r CICDPRACTICE
+          cp -r CICDPRACTICE Py_output
           zip -r build.zip Py_output
 
       - name: Package build output as ZIP
