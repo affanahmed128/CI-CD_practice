@@ -23,3 +23,15 @@ jobs:
           
       - name: Run tests
         run: pytest
+        
+      - name: Package build output as ZIP
+        run : |
+          mkdir Py_output
+          cp -r CICDPRACTICE
+          zip -r build.zip Py_output
+
+      - name: Package build output as ZIP
+        uses: actions/upload-artifact@v4  
+        with:
+          name: build.zip
+          path: build.zip 
